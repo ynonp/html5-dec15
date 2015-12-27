@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+.content {
+    background:lightgreen;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+.funky {
+    background: mediumpurple;
+    color: white;
+    font-size: 34px;
+    transform: rotate(40deg);
+    border-radius: 40px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+img {
+    outline: 2px solid red;
+}
+
+p {
+    outline: 2px solid red;
+}

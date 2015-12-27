@@ -5,6 +5,6 @@ https://developer.mozilla.org/en-US/docs/CSS
 
 ## Lab 1
 
-HTML file: http://pastebin.com/ Wm2s8EnH
+HTML file: http://pastebin.com/Wm2s8EnH
 
 

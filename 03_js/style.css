@@ -1,0 +1,9 @@
+.huge {
+    text-align: center;
+    color:red;
+    font-size: 48px;
+    transform: rotate(20deg);
+    background:lightgoldenrodyellow;
+    border: 2px solid purple;
+    transition: all 0.5s;
+}

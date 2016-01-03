@@ -1,0 +1,12 @@
+.container {
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.square {
+    width:30%;
+    height: 100px;
+    border: 2px solid gray;
+    text-align: center;
+    line-height: 100px;
+}

@@ -28,9 +28,11 @@ function handleClick(ev) {
 
 function play(el) {
   el.textContent = currentPlayer;
-  currentPlayer = (currentPlayer === 'X' ? 'O' : 'X');
-  panel.textContent = panel.textContent = "It's " + currentPlayer + ' Turn. Go!';
-  hasWinner();
+  if (!hasWinner()) {
+    currentPlayer = (currentPlayer === 'X' ? 'O' : 'X');
+    panel.textContent = panel.textContent = "It's " + currentPlayer + ' Turn. Go!';
+  }
+
 }
 
 

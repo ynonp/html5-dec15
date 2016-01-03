@@ -4,52 +4,29 @@
 
 // MyTextArea is a function (called constructor)
 // It returns an object
-
-function MyTextAreaPrototype() {
-  this.setText = function(text) {
-    var ta = this.el.querySelector('textarea');
-    ta.textContent = text;
-  };
-
-  this.reset = function() {
-    var ta = this.el.querySelector('textarea');
-    ta.textContent = '';
-  };
-
-
-  this.handleInput = function(ev) {
-    var span = this.el.querySelector('.val');
-    span.textContent = this.el.querySelector('textarea').value.length;
-  }
-
-}
-
 // Constructor
 function MyTextArea(el) {
   el.innerHTML = '<p>Total: <span class="val">0</span> characters</p>' +
     '<textarea></textarea>';
-  this.el = el;
+  this.el = {
+    ta: el.querySelector('textarea'),
+    val: el.querySelector('.val'),
+  };
 
   el.addEventListener('input', this.handleInput.bind(this));
 }
 
+MyTextArea.prototype.setText = function(text) {
+  this.el.ta.textContent = text;
+};
 
+MyTextArea.prototype.reset = function() {
+  this.el.ta.textContent = '';
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-var proto = new MyTextAreaPrototype();
-MyTextArea.prototype = proto;
+MyTextArea.prototype.handleInput = function(ev) {
+  this.el.val.textContent = this.el.ta.value.length;
+};
 
 
 var items = document.querySelectorAll('.ta');
@@ -59,8 +36,6 @@ var items = document.querySelectorAll('.ta');
 
 var t1 = new MyTextArea(items[0]);
 var t2 = new MyTextArea(items[1]);
-
-
 
 
 

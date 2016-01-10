@@ -22,23 +22,23 @@ Use the attached server.js file to add collaboration to the painter app:
 
 1. Add socket.io script using:
 
-    <script src="/socket.io/socket.io.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
 
 2. Create initial connection from client javascript:
 
-    var socket = io.connect('http://localhost:3100');
+        var socket = io.connect('http://localhost:3100');
 
 3. Send events to server using:
 
-    var data = { x: 10, y: 20 };
-    socket.emit('data', data);
+        var data = { x: 10, y: 20 };
+        socket.emit('data', data);
 
 The data in the above code is just an example. Use whatever data you need to send
 
 4. Handle incoming server events:
 
-    socket.on('data', function(data) {
-      // now data is the object received from server
-    });
+        socket.on('data', function(data) {
+            // now data is the object received from server
+        });
 
 

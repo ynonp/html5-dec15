@@ -65,9 +65,17 @@
 	
 	var _loop2 = _interopRequireDefault(_loop);
 	
+	var _multi_input = __webpack_require__(/*! ./components/multi_input.jsx */ 162);
+	
+	var _multi_input2 = _interopRequireDefault(_multi_input);
+	
+	var _lab = __webpack_require__(/*! ./components/lab1.jsx */ 163);
+	
+	var _lab2 = _interopRequireDefault(_lab);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	_reactDom2.default.render(_react2.default.createElement(_loop2.default, { n: 5 }), document.querySelector('main'));
+	_reactDom2.default.render(_react2.default.createElement(_lab2.default, null), document.querySelector('main'));
 
 /***/ },
 /* 1 */
@@ -21779,6 +21787,117 @@
 	  }
 	}.call(this));
 
+
+/***/ },
+/* 162 */
+/*!****************************************!*\
+  !*** ./src/components/multi_input.jsx ***!
+  \****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _underscore = __webpack_require__(/*! underscore */ 161);
+	
+	var _underscore2 = _interopRequireDefault(_underscore);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'multi_input',
+	
+	  propTypes: {
+	    boxCount: _react2.default.PropTypes.number
+	  },
+	  // return default property values
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      boxCount: 5
+	    };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      text: "Please type something..."
+	    };
+	  },
+	
+	  handleTextChange: function handleTextChange(e) {
+	    var text = e.target.value;
+	    this.setState({ text: text });
+	  },
+	
+	  renderItem: function renderItem(item) {
+	    return _react2.default.createElement('input', {
+	      onChange: this.handleTextChange,
+	      type: 'text',
+	      value: this.state.text
+	    });
+	  },
+	
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _underscore2.default.range(this.props.boxCount).map(this.renderItem)
+	    );
+	  }
+	});
+
+/***/ },
+/* 163 */
+/*!*********************************!*\
+  !*** ./src/components/lab1.jsx ***!
+  \*********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _multi_input = __webpack_require__(/*! ./multi_input */ 162);
+	
+	var _multi_input2 = _interopRequireDefault(_multi_input);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = _react2.default.createClass({
+	  displayName: 'lab1',
+	
+	  getInitialState: function getInitialState() {
+	    return {
+	      boxCount: 4
+	    };
+	  },
+	
+	  setBoxCount: function setBoxCount(e) {
+	    this.setState({ boxCount: e.target.value });
+	  },
+	
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement('input', { type: 'number',
+	        value: this.state.boxCount,
+	        onChange: this.setBoxCount }),
+	      _react2.default.createElement(_multi_input2.default, { boxCount: this.state.boxCount })
+	    );
+	  }
+	});
 
 /***/ }
 /******/ ]);

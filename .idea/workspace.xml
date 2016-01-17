@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25ebae0-d6a2-4320-824c-6797bb82d47c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/components/counter.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/components/hello_world.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/components/loop.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/main.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/components/lab1.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12_react-simple-components/bundle.js" afterPath="$PROJECT_DIR$/12_react-simple-components/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12_react-simple-components/bundle.js.map" afterPath="$PROJECT_DIR$/12_react-simple-components/bundle.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12_react-simple-components/index.html" afterPath="$PROJECT_DIR$/12_react-simple-components/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/12_react-simple-components/src/main.jsx" afterPath="$PROJECT_DIR$/12_react-simple-components/src/main.jsx" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +30,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loop.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loop.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/loop.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38969404">
+            <state vertical-scroll-proportion="0.0">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <marker date="1453016770000" expanded="true" signature="89:312" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multi_input.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -45,7 +56,27 @@
         <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lab1.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/lab1.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24798712">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/12_react-simple-components/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.4193548">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -89,10 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/05_components/01textarea.js" />
-        <option value="$PROJECT_DIR$/05_components/03_classes.html" />
-        <option value="$PROJECT_DIR$/05_components/03_classes.js" />
-        <option value="$PROJECT_DIR$/06_files/util.js" />
         <option value="$PROJECT_DIR$/06_files/mytextarea.js" />
         <option value="$PROJECT_DIR$/06_files/main.js" />
         <option value="$PROJECT_DIR$/06_files/webpack.config.js" />
@@ -132,14 +159,18 @@
         <option value="$PROJECT_DIR$/labs/package.json" />
         <option value="$PROJECT_DIR$/labs/02_painter.md" />
         <option value="$PROJECT_DIR$/12_react-simple-components/package.json" />
-        <option value="$PROJECT_DIR$/12_react-simple-components/index.html" />
         <option value="$PROJECT_DIR$/12_react-simple-components/src/main.js" />
         <option value="$PROJECT_DIR$/12_react-simple-components/webpack.config.js" />
         <option value="$PROJECT_DIR$/12_react-simple-components/src/components/helloworld.jsx.js" />
         <option value="$PROJECT_DIR$/12_react-simple-components/src/hello_world.jsx" />
         <option value="$PROJECT_DIR$/12_react-simple-components/src/components/loop.jsx" />
-        <option value="$PROJECT_DIR$/12_react-simple-components/src/main.jsx" />
         <option value="$PROJECT_DIR$/12_react-simple-components/src/components/counter.jsx" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.jsx.js" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.js" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/index.html" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.jsx" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/src/components/lab1.jsx" />
+        <option value="$PROJECT_DIR$/12_react-simple-components/src/main.jsx" />
       </list>
     </option>
   </component>
@@ -271,13 +302,15 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/12_react-simple-components/src/components" />
+    <property name="last_opened_file_path" value="$USER_HOME$/work/projects/webapps/TichnutTV/client/.eslintrc" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="js.eslint.nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="js.eslint.eslintPackage" value="/usr/local/lib/node_modules/eslint" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -287,7 +320,10 @@
       <recent name="$PROJECT_DIR$/05_components" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.multi_input.js">
+    <configuration default="false" name="multi_input.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="multi_input.js" working-dir="$PROJECT_DIR$/12_react-simple-components/src/components">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -336,6 +372,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.multi_input.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.multi_input.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -354,7 +398,7 @@
     <frame x="0" y="23" width="1024" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20538385" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06879362" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -362,7 +406,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24903722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -408,27 +452,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/05_components/02_objectoriented.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36320755">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_components/01textarea.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1934066">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/05_components/01textarea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10377359">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/05_components/03_classes.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46698114">
@@ -751,14 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/12_react-simple-components/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2983051">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/counter.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -775,18 +790,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/main.jsx">
+    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/loop.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1453016770000" expanded="true" signature="89:312" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12077295">
+          <caret line="170" column="30" selection-start-line="170" selection-start-column="30" selection-end-line="170" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/loop.jsx">
+    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/multi_input.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38969404">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12_react-simple-components/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4193548">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12_react-simple-components/src/components/lab1.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24798712">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding />
         </state>
       </provider>

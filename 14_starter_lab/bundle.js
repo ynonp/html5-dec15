@@ -57,35 +57,13 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _hello_world = __webpack_require__(/*! ./components/hello_world */ 159);
+	var _demo = __webpack_require__(/*! ./demo4 */ 159);
 	
-	var _hello_world2 = _interopRequireDefault(_hello_world);
-	
-	var _loop = __webpack_require__(/*! ./components/loop.jsx */ 160);
-	
-	var _loop2 = _interopRequireDefault(_loop);
-	
-	var _multi_input = __webpack_require__(/*! ./components/multi_input.jsx */ 162);
-	
-	var _multi_input2 = _interopRequireDefault(_multi_input);
-	
-	var _lab = __webpack_require__(/*! ./components/lab1.jsx */ 163);
-	
-	var _lab2 = _interopRequireDefault(_lab);
-	
-	var _lab3 = __webpack_require__(/*! ./components/lab2 */ 164);
-	
-	var _lab4 = _interopRequireDefault(_lab3);
-	
-	var _flist = __webpack_require__(/*! ./components/flist.jsx */ 165);
-	
-	var _flist2 = _interopRequireDefault(_flist);
+	var _demo2 = _interopRequireDefault(_demo);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-	
-	_reactDom2.default.render(_react2.default.createElement(_flist2.default, { items: days }), document.querySelector('main'));
+	_reactDom2.default.render(_react2.default.createElement(_demo2.default, null), document.querySelector('main'));
 
 /***/ },
 /* 1 */
@@ -20158,12 +20136,12 @@
 
 /***/ },
 /* 159 */
-/*!****************************************!*\
-  !*** ./src/components/hello_world.jsx ***!
-  \****************************************/
+/*!***********************!*\
+  !*** ./src/demo4.jsx ***!
+  \***********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -20173,32 +20151,47 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _selector = __webpack_require__(/*! ./selector */ 160);
+	
+	var _selector2 = _interopRequireDefault(_selector);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	// Hello World class
-	
 	exports.default = _react2.default.createClass({
-	  displayName: "hello_world",
+	  displayName: 'demo4',
 	
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "nice class" },
+	      'div',
+	      null,
 	      _react2.default.createElement(
-	        "p",
-	        { className: "large text" },
-	        "I can see a kitten"
-	      ),
-	      _react2.default.createElement("img", { src: "http://art.artworkbycaroline.com/wp-content/uploads/2011/04/folk_singer_cat.jpg" })
+	        _selector2.default,
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          { name: 'cool game' },
+	          'one'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { name: 't1' },
+	          'two'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { name: 'textbox' },
+	          'three'
+	        )
+	      )
 	    );
 	  }
 	});
 
 /***/ },
 /* 160 */
-/*!*********************************!*\
-  !*** ./src/components/loop.jsx ***!
-  \*********************************/
+/*!**************************!*\
+  !*** ./src/selector.jsx ***!
+  \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20218,25 +20211,60 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _react2.default.createClass({
-	  displayName: 'loop',
+	  displayName: 'selector',
 	
 	  propTypes: {
-	    n: _react2.default.PropTypes.number
+	    children: _react2.default.PropTypes.node
 	  },
-	
-	  renderItem: function renderItem(item) {
-	    return _react2.default.createElement(
-	      'p',
-	      null,
-	      item
-	    );
+	  getInitialState: function getInitialState() {
+	    return { selected: 0 };
+	  },
+	  selectItem: function selectItem(idx) {
+	    this.setState({ selected: idx });
 	  },
 	
 	  render: function render() {
+	    var _this = this;
+	
+	    var children = _react2.default.Children.toArray(this.props.children);
+	
 	    return _react2.default.createElement(
 	      'div',
-	      null,
-	      _underscore2.default.range(this.props.n).map(this.renderItem)
+	      { className: 'container' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-xs-4' },
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'nav nav-pills nav-stacked' },
+	          _underscore2.default.range(children.length).map(function (index) {
+	            return _react2.default.createElement(
+	              'li',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { key: index, href: '#',
+	                  onClick: _this.selectItem.bind(_this, index) },
+	                index
+	              )
+	            );
+	          }),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              'button',
+	              null,
+	              'New'
+	            )
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'col-xs-8' },
+	        children[this.state.selected]
+	      )
 	    );
 	  }
 	});
@@ -21797,258 +21825,6 @@
 	  }
 	}.call(this));
 
-
-/***/ },
-/* 162 */
-/*!****************************************!*\
-  !*** ./src/components/multi_input.jsx ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _underscore = __webpack_require__(/*! underscore */ 161);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'multi_input',
-	
-	  propTypes: {
-	    boxCount: _react2.default.PropTypes.number
-	  },
-	  // return default property values
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      boxCount: 5
-	    };
-	  },
-	  getInitialState: function getInitialState() {
-	    return {
-	      text: "Please type something..."
-	    };
-	  },
-	
-	  handleTextChange: function handleTextChange(e) {
-	    var text = e.target.value;
-	    this.setState({ text: text });
-	  },
-	
-	  renderItem: function renderItem(item) {
-	    return _react2.default.createElement('input', {
-	      onChange: this.handleTextChange,
-	      type: 'text',
-	      value: this.state.text
-	    });
-	  },
-	
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _underscore2.default.range(this.props.boxCount).map(this.renderItem)
-	    );
-	  }
-	});
-
-/***/ },
-/* 163 */
-/*!*********************************!*\
-  !*** ./src/components/lab1.jsx ***!
-  \*********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _multi_input = __webpack_require__(/*! ./multi_input */ 162);
-	
-	var _multi_input2 = _interopRequireDefault(_multi_input);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'lab1',
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      boxCount: 4
-	    };
-	  },
-	
-	  setBoxCount: function setBoxCount(e) {
-	    this.setState({ boxCount: e.target.value });
-	  },
-	
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement('input', { type: 'number',
-	        value: this.state.boxCount,
-	        onChange: this.setBoxCount }),
-	      _react2.default.createElement(_multi_input2.default, { boxCount: this.state.boxCount })
-	    );
-	  }
-	});
-
-/***/ },
-/* 164 */
-/*!*********************************!*\
-  !*** ./src/components/lab2.jsx ***!
-  \*********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _underscore = __webpack_require__(/*! underscore */ 161);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'lab2',
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      time: 0
-	    };
-	  },
-	
-	  changeValue: function changeValue(factor, e) {
-	    this.setState({ time: e.target.value * factor });
-	  },
-	
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'Seconds',
-	        _react2.default.createElement('input', { type: 'number',
-	          value: this.state.time,
-	          onChange: _underscore2.default.partial(this.changeValue, 1) })
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'Minutes',
-	        _react2.default.createElement('input', { type: 'number',
-	          value: this.state.time / 60,
-	          onChange: _underscore2.default.partial(this.changeValue, 60) })
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'Hours',
-	        _react2.default.createElement('input', { type: 'number',
-	          value: this.state.time / 3600,
-	          onChange: _underscore2.default.partial(this.changeValue, 3600) })
-	      )
-	    );
-	  }
-	});
-
-/***/ },
-/* 165 */
-/*!**********************************!*\
-  !*** ./src/components/flist.jsx ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _underscore = __webpack_require__(/*! underscore */ 161);
-	
-	var _underscore2 = _interopRequireDefault(_underscore);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = _react2.default.createClass({
-	  displayName: 'flist',
-	
-	  propTypes: {
-	    items: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.string).isRequired
-	  },
-	
-	  getInitialState: function getInitialState() {
-	    return {
-	      filter: ''
-	    };
-	  },
-	
-	  setFilterText: function setFilterText(ev) {
-	    this.setState({ filter: ev.target.value });
-	  },
-	
-	  render: function render() {
-	    var _this = this;
-	
-	    var items = _underscore2.default.filter(this.props.items, function (item) {
-	      return item.indexOf(this.state.filter) >= 0;
-	    }, this);
-	
-	    var items2 = _underscore2.default.filter(this.props.items, function (item) {
-	      return item.indexOf(_this.state.filter) >= 0;
-	    });
-	
-	    var items3 = [];
-	    for (var i = 0; i < this.props.items.length; i++) {
-	      if (this.props.items[i].indexOf(this.state.filter) >= 0) {
-	        items3.push(this.props.items[i]);
-	      }
-	    }
-	
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement('input', { type: 'text', value: this.state.filter, onChange: this.setFilterText }),
-	      _underscore2.default.map(items3, function (i) {
-	        return _react2.default.createElement(
-	          'p',
-	          { key: i },
-	          i
-	        );
-	      })
-	    );
-	  }
-	});
 
 /***/ }
 /******/ ]);

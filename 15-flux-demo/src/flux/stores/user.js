@@ -2,7 +2,6 @@ import Store from '../store';
 import Dispatcher from '../dispatcher';
 import symbols from '../symbols';
 
-
 const UsersStore = Object.assign({}, Store, {
   text: "Hello World",
 

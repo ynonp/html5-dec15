@@ -3,32 +3,39 @@ import ReactDOM from 'react-dom';
 
 import GameStore from '../flux/stores/game';
 import GameActions from '../flux/actions/game';
+import UserStore from '../flux/stores/user';
+
 import _ from 'underscore';
+import ScorePanel from './score_panel';
 
 export default React.createClass({
   // React Hook
   getInitialState: function() {
-    return this.stateFromStore(GameStore);
+    return this.stateFromStore(GameStore, UserStore);
   },
 
   // React Hook
   componentDidMount: function() {
     GameStore.subscribe(this.handleStoreChange);
+    UserStore.subscribe(this.handleStoreChange);
   },
 
   // React Hook
   componentWillUnmount: function() {
     GameStore.unsubscribe(this.handleStoreChange);
+    UserStore.unsubscribe(this.handleStoreChange);
   },
 
   handleStoreChange: function() {
-    this.setState(this.stateFromStore(GameStore));
+    this.setState(this.stateFromStore(GameStore, UserStore));
   },
 
-  stateFromStore: function(store) {
+  stateFromStore: function(gameStore, userStore) {
     return {
-      winner: store.redIndex,
-      squares: store.squares,
+      winner: gameStore.redIndex,
+      squares: gameStore.squares,
+      score: gameStore.score,
+      text: userStore.text,
     };
   },
 
@@ -37,13 +44,15 @@ export default React.createClass({
   },
 
   renderItem: function(index) {
+    var cls = "square";
     if ( index === this.state.winner ) {
-      return (<div className="square winner"
-                   onClick={this.play.bind(this,index)}>
-      </div>);
-    } else {
-      return <div className="square"></div>
+      cls += " winner";
     }
+
+    return (<div className={cls}
+                 onClick={this.play.bind(this,index)}>
+    </div>);
+
   },
 
   // React Hook
@@ -51,6 +60,8 @@ export default React.createClass({
     var items = this.state.squares;
 
     return (<div>
+      <p>{this.state.text}</p>
+        <ScorePanel score={this.state.score} />
       {items.map(this.renderItem)}
     </div>);
   }

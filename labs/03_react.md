@@ -1,6 +1,6 @@
 # React Dynamic UI Lab
 
-## The Task
+## The Task: Part 1
 
 In the following lab we'll implement a dynamic widget based UI. The UI should provide:
 
@@ -20,6 +20,10 @@ Supported Widget Types:
 3. TimeConverter - A widget for converting time units (seconds/minutes/hours)
 4. SimpleText - A widget for showing simple text
 
+## The Task: Part 2
+
+Modify the code you wrote in Part 1 to use Flux architecture.
+
 ## Starter
 
 You can start with the start files here:
@@ -30,6 +34,7 @@ https://github.com/ynonp/html5-dec15/tree/master/14_starter_lab
 1. Add TicTacToe widget
 2. Maintain widget's states between transitions (start to play a game of TicTacToe, then move to another widget and go back to TicTacToe should maintain its previous state).
 3. Allow widgets to acceps parameters when created: When selecting a widget type in the blank widget form, the form should present "settings" specific to the selected widget type, which will be passed to it as properties when it is saved.
+4. Add collaboration support (using socket.io)
 
 
 ## Technicals
